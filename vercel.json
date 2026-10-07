@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "app/api/projects/[projectId]/export/route.ts": {
+      "maxDuration": 300
+    }
+  }
+}

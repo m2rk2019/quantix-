@@ -1,0 +1,32 @@
+---
+description: Quantix Version 1 estimating modules are COMPLETE and FROZEN
+globs: lib/smart-import/**,services/smart-import/**,services/wbs/**,services/boq/**,services/rate-library/**,services/project-rate-library/**,services/rate-analysis/**,services/estimate/**,services/tender/**,services/validation/**,services/historical-projects/**,services/master-templates/**,features/boq/**,features/wbs/**,features/tender/**,lib/boq/calculations.ts,lib/boq/deterministic-match.ts
+alwaysApply: true
+---
+
+# Quantix Version 1 — FROZEN
+
+Version 1 estimating is **COMPLETE and FROZEN**.
+
+## Do not modify (unless production bug)
+
+- Smart Excel Import / Import Engine v1 (`lib/smart-import/**`, `services/smart-import/**`)
+- WBS, BOQ, Resource Library, Unit Rates, Estimate Summary
+- Tender Package, Validation, Historical Archive
+- Master Templates / Template Reuse / Versioning
+
+## Version 1.1+
+
+New work (e.g. Quantity Takeoff) must live in **separate** modules:
+
+- `features/takeoff/**`
+- `services/takeoff/**`
+- `lib/takeoff/**`
+- `types/takeoff.ts`
+- `app/(shell)/projects/[projectId]/takeoff/**`
+
+Takeoff ↔ BOQ quantity linking is authorized in **V1.1 Phase 5** via
+`services/takeoff/boq-link.ts` and additive `boq_items.quantity_source` /
+`takeoff_boq_links`. Do **not** modify Import Engine, Smart Excel Import,
+Master Templates, or Historical Archive. Keep BOQ edits additive (badges /
+reverse nav only).

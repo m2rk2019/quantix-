@@ -1,0 +1,85 @@
+{
+  "generated_at": "2026-10-05T09:12:22.632Z",
+  "patch": {
+    "file": "lib/smart-import/extractors.ts",
+    "kept": true
+  },
+  "nia": {
+    "project_id": "d387f1f1-4271-4e35-832c-e30ba2cb0e66",
+    "project_code": "QTX-2026-000013",
+    "before": {
+      "boq_count": 450,
+      "boq_sum": 351522209.34,
+      "rate_library_count": 231,
+      "estimate": {
+        "direct_cost": 351522209.34,
+        "indirect_cost": 35152220.93,
+        "contingency": 19333721.51,
+        "markup": 40600815.18,
+        "vat": 53593076.04,
+        "grand_total": 500202043
+      }
+    },
+    "after": {
+      "boq_count": 450,
+      "boq_sum": 351522209.34,
+      "rate_library_count": 231,
+      "estimate": {
+        "direct_cost": 351522209.34,
+        "indirect_cost": 35152220.93,
+        "contingency": 19333721.51,
+        "markup": 40600815.18,
+        "vat": 53593076.04,
+        "grand_total": 500202043
+      }
+    },
+    "checks": {
+      "boq_count_unchanged": true,
+      "direct_cost_unchanged": true,
+      "grand_total_unchanged": true,
+      "unit_rates_unchanged": true,
+      "estimate_summary_unchanged": true,
+      "pass": true
+    }
+  },
+  "strevi": {
+    "project_id": "a356c582-fe81-472d-8bee-9575970dd3a0",
+    "project_code": "QTX-2026-000017",
+    "before": {
+      "boq_count": 504,
+      "boq_sum": 1856005617.83,
+      "estimate": {
+        "direct_cost": 1856005617.83,
+        "indirect_cost": 185600561.78,
+        "contingency": 102080308.98,
+        "markup": 214368648.86,
+        "vat": 282966616.49,
+        "grand_total": 2641021753.94
+      }
+    },
+    "after": {
+      "boq_count": 505,
+      "boq_sum": 1859023517.46,
+      "estimate": {
+        "direct_cost": 1859023517.46,
+        "indirect_cost": 185902351.75,
+        "contingency": 102246293.46,
+        "markup": 214717216.27,
+        "vat": 283426725.47,
+        "grand_total": 2645316104.41
+      }
+    },
+    "target_direct_cost": 1859023517.47,
+    "checks": {
+      "grand_total_pass": true,
+      "has_maintenance_crew": true,
+      "has_security_grills": true,
+      "no_duplicated_mc2_package": true,
+      "has_mc2_components": true,
+      "no_skipped_package_amounts": true,
+      "boq_reconciliation_pass": true,
+      "estimate_summary_pass": true,
+      "delta_vs_target": -0.01
+    }
+  }
+}

@@ -1,0 +1,40 @@
+---
+description: Freeze Quantix Import Engine v1.0 — no importer changes without NIA+STREVI regression PASS
+globs: lib/smart-import/**,services/smart-import/**,scripts/regression/**
+alwaysApply: true
+---
+
+# Quantix Import Engine v1.0 — FROZEN
+
+The production importer is **accepted and frozen** as **Quantix Import Engine v1.0** (`1.0.0`).
+
+## Do not modify
+
+Do **not** change importer behavior in:
+
+- `lib/smart-import/**`
+- `services/smart-import/**`
+
+unless a **production bug** is discovered.
+
+## Permanent standard
+
+Parsing rules and supported workbooks are documented in `docs/IMPORT_ENGINE_V1.md`.
+
+Supported patterns (required):
+
+1. **NIA** — `samples/NIA_Budgetary_Cost_Breakdown.xlsx`
+2. **STREVI** — `samples/STREVI_BCB_Breakdown.xlsx`
+
+## Mandatory regression
+
+Before any importer change is considered complete:
+
+```bash
+npm run regression:import-engine-v1
+```
+
+Both fixtures must report **PASS**. No regression allowed.
+
+Goldens: `docs/import-engine-v1/REGRESSION_GOLDENS.json`  
+Version marker: `lib/smart-import/engine-version.ts`

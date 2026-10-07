@@ -1,0 +1,238 @@
+{
+  "overall": "PASS",
+  "excel": {
+    "sheets": [
+      {
+        "name": "BCB Breakdown",
+        "state": "visible",
+        "rows": 1387
+      },
+      {
+        "name": "Bid Summary",
+        "state": "hidden",
+        "rows": 103
+      }
+    ],
+    "project": "4PH QCITIZEN HOMES NIA ROAD RENTAL HOUSING PROJECT",
+    "location": "Nia Road, Brgy. Pinyahan, Quezon City",
+    "packageName": "Complete Design & Build of CSA and MEPF Works",
+    "cfa": 12013.11,
+    "units": 308,
+    "bldgsSheet": 1,
+    "bldgsBid": 5,
+    "grand": 351522209.40614164,
+    "leaf": 450,
+    "sections": 9,
+    "material": 203013424.67585033,
+    "labor": 77432900.02348833,
+    "services": 71075884.70680282,
+    "disciplineTotals": {
+      "GENERAL REQUIREMENTS": 76655632.24258874,
+      "STRUCTURAL": 107810566.89808422,
+      "ARCHITECTURAL": 92864105.01849474,
+      "MECHANICAL": 5659009.403457351,
+      "ELECTRICAL": 23582675.310098484,
+      "AUXILIARY": 6417759.568719794,
+      "PLUMBING": 22786293.733333796,
+      "FIRE PROTECTION": 9314381.511364508,
+      "ALLIED SERVICES": 6431785.72
+    },
+    "leafRows": 450
+  },
+  "quantix": {
+    "project_info": {
+      "project_name": "4PH QCITIZEN HOMES NIA ROAD RENTAL HOUSING PROJECT",
+      "client_name": "Unknown Client",
+      "location": "Nia Road, Brgy. Pinyahan, Quezon City",
+      "building_type": null,
+      "contract_type": "Complete Design & Build of CSA and MEPF Works",
+      "project_category": null,
+      "cfa_sqm": 12013.11,
+      "number_of_buildings": 5,
+      "number_of_units": 308,
+      "estimate_date": null,
+      "revision": null,
+      "currency": "PHP",
+      "prepared_by": null
+    },
+    "sheets": [
+      {
+        "sheet_name": "BCB Breakdown",
+        "role": "cost_breakdown",
+        "confidence": 1,
+        "header_row": 8,
+        "columns": {
+          "description": 3,
+          "unit": 8,
+          "quantity": 7,
+          "unit_rate": 9,
+          "amount": 15
+        },
+        "sample_headers": [
+          "item",
+          "quantity",
+          "uom",
+          "material rate",
+          "material cost",
+          "labor rate",
+          "labor cost",
+          "services rate",
+          "services cost",
+          "total cost",
+          "% wt",
+          "cost per cfa"
+        ]
+      },
+      {
+        "sheet_name": "Bid Summary",
+        "role": "bid_summary",
+        "confidence": 0.5,
+        "header_row": null,
+        "columns": {},
+        "sample_headers": [
+          "location",
+          "nia road, brgy. pinyahan, quezon city",
+          "total # of units",
+          "308"
+        ]
+      }
+    ],
+    "boq_leaf": 450,
+    "boq_groups": 88,
+    "excel_boq_total": 351522209.40614176,
+    "resource_rows": 0,
+    "bid_summary": {
+      "direct_cost": 351522209.4061417,
+      "bid_price": 1757611047.0307083
+    }
+  },
+  "results": [
+    {
+      "feature": "Workbook detected",
+      "status": "PASS",
+      "detail": "samples/NIA_Budgetary_Cost_Breakdown.xlsx"
+    },
+    {
+      "feature": "Sheets recognized (Excel)",
+      "status": "PASS",
+      "detail": "BCB Breakdown, Bid Summary (hidden)"
+    },
+    {
+      "feature": "Sheets recognized",
+      "status": "PASS",
+      "detail": "BCB Breakdown:cost_breakdown, Bid Summary:bid_summary"
+    },
+    {
+      "feature": "Project Info",
+      "status": "PASS",
+      "detail": "4PH QCITIZEN HOMES NIA ROAD RENTAL HOUSING PROJECT"
+    },
+    {
+      "feature": "Project location",
+      "status": "PASS",
+      "detail": "Nia Road, Brgy. Pinyahan, Quezon City"
+    },
+    {
+      "feature": "WBS",
+      "status": "PASS",
+      "detail": "88 group/section nodes"
+    },
+    {
+      "feature": "BOQ",
+      "status": "PASS",
+      "detail": "450 items (exact match with Excel leaf set)"
+    },
+    {
+      "feature": "Resources",
+      "status": "PASS",
+      "detail": "388 unique BOQ→resource candidates"
+    },
+    {
+      "feature": "Unit Rates",
+      "status": "PASS",
+      "detail": "450/450 priced lines"
+    },
+    {
+      "feature": "Estimate Summary",
+      "status": "PASS",
+      "detail": "Excel 351522209.41 vs Quantix 351522209.41 (0%)"
+    },
+    {
+      "feature": "BOQ line reconciliation",
+      "status": "PASS",
+      "detail": "450 rows matched by Excel row index"
+    },
+    {
+      "feature": "Project Import page",
+      "status": "PASS",
+      "detail": "/projects/import"
+    },
+    {
+      "feature": "Tender Package (pipeline wired)",
+      "status": "PASS",
+      "detail": "auto after import"
+    },
+    {
+      "feature": "Historical Archive",
+      "status": "PASS",
+      "detail": "Available via Approve/Archive (not auto on import)"
+    },
+    {
+      "feature": "Master Template",
+      "status": "PASS",
+      "detail": "Available via Save as Master Template (not auto on import)"
+    },
+    {
+      "feature": "Schema smart_import_jobs",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "feature": "Schema historical_projects",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "feature": "Schema tender_submissions",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "feature": "Schema master_templates",
+      "status": "PASS",
+      "detail": ""
+    }
+  ],
+  "mismatches": [
+    {
+      "area": "Dedicated resource analysis sheet",
+      "excel": "Not present in NIA workbook (resources embedded in BCB rates)",
+      "quantix": "0 resource_analysis rows",
+      "note": "Expected — resources derived from BOQ lines"
+    },
+    {
+      "area": "Resource cost split (Material)",
+      "excel": 203013424.68,
+      "quantix": "not split in Quantix import (rolled into Total Cost)",
+      "note": "Informational — Quantix stores composite BOQ amount"
+    },
+    {
+      "area": "Resource cost split (Labor)",
+      "excel": 77432900.02,
+      "quantix": "not split in Quantix import (rolled into Total Cost)",
+      "note": "Informational — Quantix stores composite BOQ amount"
+    },
+    {
+      "area": "Resource cost split (Services)",
+      "excel": 71075884.71,
+      "quantix": "not split in Quantix import (rolled into Total Cost)",
+      "note": "Informational — Quantix stores composite BOQ amount"
+    },
+    {
+      "area": "Building count (sheet vs bid summary)",
+      "excel": "BCB sheet # of Bldgs=1",
+      "quantix": "Bid Summary No. of Bldgs=5",
+      "note": "Present in source workbook — not a Quantix error"
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "workbook": "EPC. CAC. BID. 4PH STREVI. BCB Breakdown & Summary (4 Bldgs). 2026 05 18 2.xlsx",
+  "sheet": "BCB Breakdown",
+  "excel_grand_total_vat_ex_cell": "P13/P669",
+  "excel_grand_total_vat_ex": 1859023517.47042,
+  "imported_leaf_sum_raw": 1856005617.8381371,
+  "quantix_overview_direct_cost": 1856005617.83,
+  "difference_excel_vs_quantix": 3017899.64042,
+  "rounding_only_vs_leaf_sum": 0.01,
+  "discipline_recon": [
+    {
+      "discipline": "GENERAL REQUIREMENTS",
+      "excel": 277330511.325312,
+      "imported": 271693312.2930266,
+      "delta_excel_minus_import": 5637199.0322854
+    },
+    {
+      "discipline": "STRUCTURAL",
+      "excel": 729568011.976667,
+      "imported": 729568011.9766667,
+      "delta_excel_minus_import": 0
+    },
+    {
+      "discipline": "ARCHITECTURAL",
+      "excel": 437235580.536992,
+      "imported": 437235580.5369919,
+      "delta_excel_minus_import": 0
+    },
+    {
+      "discipline": "MECHANICAL",
+      "excel": 47614312.3410002,
+      "imported": 47614312.34100018,
+      "delta_excel_minus_import": 0
+    },
+    {
+      "discipline": "ELECTRICAL",
+      "excel": 142076860.842731,
+      "imported": 144696160.24273133,
+      "delta_excel_minus_import": -2619299.4
+    },
+    {
+      "discipline": "AUXILIARY",
+      "excel": 36912328.9481148,
+      "imported": 36912328.9481148,
+      "delta_excel_minus_import": 0
+    },
+    {
+      "discipline": "PLUMBING",
+      "excel": 118641798.506665,
+      "imported": 118641798.50666541,
+      "delta_excel_minus_import": 0
+    },
+    {
+      "discipline": "FIRE PROTECTION",
+      "excel": 49515541.5643683,
+      "imported": 49515541.56436832,
+      "delta_excel_minus_import": 0
+    },
+    {
+      "discipline": "ALLIED SERVICES",
+      "excel": 20128571.4285715,
+      "imported": 20128571.42857146,
+      "delta_excel_minus_import": 0
+    }
+  ],
+  "culprit_rows": [
+    {
+      "excel_row": 37,
+      "description": "Maintenance Crew",
+      "excel_amount": 5637199.03228568,
+      "issue": "missing_false_rollup",
+      "impact": -5637199.03228568,
+      "detail": "lot qty=1 leaf; next row 38 Utilities is outline level 1 (not a child). isBoqRollupParent lot-next-nonlot returned true."
+    },
+    {
+      "excel_row": 377,
+      "description": "Security Grills (Meter Center & Busduct)",
+      "excel_amount": 6000000,
+      "issue": "missing_false_rollup",
+      "impact": -6000000,
+      "detail": "lot qty=1 leaf; next row 378 C-Rated meter is same-outline sibling in same description column. Falsely skipped as rollup."
+    },
+    {
+      "excel_row": 373,
+      "description": "MC2 Typ to MC-3F TO MC-16F",
+      "excel_amount": 8619299.4,
+      "issue": "duplicated_with_components",
+      "impact": 8619299.4,
+      "detail": "Package (col D) imported together with col E components 374+376 that sum to the same amount."
+    },
+    {
+      "excel_row": 374,
+      "description": "MAIN: 100AT, 100AF, 400V/230V, 3P+N, 36kAIC, MCCB",
+      "excel_amount": 6579299.4,
+      "issue": "assembly_component_kept_with_package",
+      "impact": 6579299.4
+    },
+    {
+      "excel_row": 376,
+      "description": "KW-hr Meter Base (installation only)",
+      "excel_amount": 2040000,
+      "issue": "assembly_component_kept_with_package",
+      "impact": 2040000
+    }
+  ],
+  "net_from_culprits": -3017899.63228568,
+  "checks": {
+    "parent_rollups_skipped": "Mostly correct; Busway equal-amount lot→detail OK",
+    "zero_cost_placeholders_skipped": "Yes; not causative",
+    "formulas_evaluated_differently": "No",
+    "rounding_accumulated": "Only ~0.01; not causative",
+    "assemblies_expanded_incorrectly": "Yes — MC2 package + partial components"
+  },
+  "proposed_minimal_fix": {
+    "file": "lib/smart-import/extractors.ts",
+    "A_false_rollup": "In isBoqRollupParent lot branch, require next non-lot evidence row to be outline child (nextLevel > level) OR same-level with description column further right; if nextLevel < level return false.",
+    "B_assembly_double": "Treat col-D package followed by same-outline further-right description rows as rollup, OR drop package when following further-right amounts sum to package (±0.02). Prefer keep components 374/376, skip package 373.",
+    "do_not_apply_until_approved": true
+  }
+}

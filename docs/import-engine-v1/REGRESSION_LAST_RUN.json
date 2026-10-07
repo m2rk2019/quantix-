@@ -1,0 +1,34 @@
+{
+  "engine": "Quantix Import Engine v1.0",
+  "version": "1.0.0",
+  "ran_at": "2026-10-07T16:53:26.440Z",
+  "overall": "PASS",
+  "results": [
+    {
+      "key": "nia",
+      "status": "PASS",
+      "leaf_count": 450,
+      "leaf_sum_rounded": 351522209.41,
+      "fingerprint_sha256": "e747fd99b70466f140fc854767d3111456597479e84323d489b39aa41d7055ea",
+      "wbs_count": 107,
+      "wbs_levels": [
+        1,
+        2
+      ],
+      "max_level": 2
+    },
+    {
+      "key": "strevi",
+      "status": "PASS",
+      "leaf_count": 505,
+      "leaf_sum_rounded": 1859023517.47,
+      "fingerprint_sha256": "82efa807cc01e4046091fdf8ae5e39a51f87f8c875cc25dd4a288e03dc90b109",
+      "wbs_count": 125,
+      "wbs_levels": [
+        1,
+        2
+      ],
+      "max_level": 2
+    }
+  ]
+}

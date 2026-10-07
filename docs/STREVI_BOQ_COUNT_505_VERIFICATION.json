@@ -1,0 +1,84 @@
+{
+  "question": "Why did STREVI BOQ count change 504 -> 505?",
+  "before_count": 504,
+  "after_count": 505,
+  "db_count": 505,
+  "net_change": 1,
+  "accounting": {
+    "added_leaf_count": 2,
+    "removed_leaf_count": 1,
+    "net": 1,
+    "formula": "(+2 newly imported leaves) - (1 former package leaf) = +1"
+  },
+  "newly_imported_rows": [
+    {
+      "newly_imported_boq_row": {
+        "excel_row_number": 37,
+        "description": "Maintenance Crew",
+        "quantity": 1,
+        "unit": "lot",
+        "rate": 5637199.03,
+        "amount": 5637199.03
+      },
+      "excel_source_row": {
+        "excel_row_number": 37,
+        "description": "Maintenance Crew",
+        "quantity": 1,
+        "unit": "lot",
+        "rate": 0,
+        "amount": 5637199.03
+      },
+      "excel_exact_description_match_count": 1,
+      "excel_match_row_numbers": [
+        37
+      ],
+      "classification": "A_existed_in_excel_previously_skipped"
+    },
+    {
+      "newly_imported_boq_row": {
+        "excel_row_number": 377,
+        "description": "Security Grills (Meter Center & Busduct)",
+        "quantity": 1,
+        "unit": "lot",
+        "rate": 6000000,
+        "amount": 6000000
+      },
+      "excel_source_row": {
+        "excel_row_number": 377,
+        "description": "Security Grills (Meter Center & Busduct)",
+        "quantity": 1,
+        "unit": "lot",
+        "rate": 6000000,
+        "amount": 6000000
+      },
+      "excel_exact_description_match_count": 1,
+      "excel_match_row_numbers": [
+        377
+      ],
+      "classification": "A_existed_in_excel_previously_skipped"
+    }
+  ],
+  "removed_package_leaves": [
+    {
+      "no_longer_imported_as_leaf": {
+        "excel_row_number": 373,
+        "description": "MC2 Typ to MC-3F TO MC-16F",
+        "quantity": 60,
+        "unit": "set/s",
+        "amount": 8619299.4
+      },
+      "excel_source_row": {
+        "excel_row_number": 373,
+        "description": "MC2 Typ to MC-3F TO MC-16F",
+        "quantity": 60,
+        "unit": "set/s",
+        "rate": 0,
+        "amount": 8619299.4
+      },
+      "now_group_header": true,
+      "reason": "Previously imported package leaf; now correctly classified as rollup/assembly parent (components remain as leaves)."
+    }
+  ],
+  "acceptance": "PASS",
+  "acceptance_detail": "Each newly imported BOQ row exists exactly once in Excel and exactly once in Quantix. Classification A (previously skipped). Not duplicated."
+}

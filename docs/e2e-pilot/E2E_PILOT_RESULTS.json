@@ -1,0 +1,622 @@
+{
+  "generated_at": "2026-10-07T16:03:15.449Z",
+  "pilot_doc": "docs/QUANTIX_E2E_PILOT.md",
+  "execution_time_ms": 13459,
+  "regression_time_ms": 13458,
+  "import_engine_regression": {
+    "exit_code": 0,
+    "overall_pass": true,
+    "nia_pass": true,
+    "strevi_pass": true
+  },
+  "counts": {
+    "auto_total": 19,
+    "auto_pass": 19,
+    "auto_fail": 0,
+    "manual_required": 13
+  },
+  "production_readiness_score": 60,
+  "production_readiness_score_note": "Manual UI phases not executed in this automated run (0/40 awarded). Complete QUANTIX_E2E_PILOT.md manually to unlock full score.",
+  "recommendation": "Automated gate PASS. Complete all MANUAL_REQUIRED phases in QUANTIX_E2E_PILOT.md, attach screenshots, then re-score for production sign-off.",
+  "bugs": [],
+  "phases": [
+    {
+      "phase": 1,
+      "verdict": "PASS_AUTO / MANUAL_REQUIRED",
+      "checks": [
+        {
+          "id": "P1-ROUTE",
+          "phase": 1,
+          "type": "AUTO",
+          "title": "Project create/list services",
+          "status": "PASS",
+          "detail": "services/projects/create-project.ts, services/projects/list-projects.ts"
+        },
+        {
+          "id": "P1-UI",
+          "phase": 1,
+          "type": "MANUAL",
+          "title": "Create project, save, verify project code & list",
+          "status": "MANUAL_REQUIRED",
+          "detail": "Requires interactive estimator execution"
+        }
+      ]
+    },
+    {
+      "phase": 2,
+      "verdict": "PASS_AUTO / MANUAL_REQUIRED",
+      "checks": [
+        {
+          "id": "P2-FIXTURE",
+          "phase": 2,
+          "type": "AUTO",
+          "title": "NIA sample workbook present",
+          "status": "PASS",
+          "detail": "samples/NIA_Budgetary_Cost_Breakdown.xlsx"
+        },
+        {
+          "id": "P2-GOLDEN",
+          "phase": 2,
+          "type": "AUTO",
+          "title": "Import Engine v1 regression goldens present",
+          "status": "PASS",
+          "detail": "docs/import-engine-v1/REGRESSION_GOLDENS.json"
+        },
+        {
+          "id": "P2-UI",
+          "phase": 2,
+          "type": "MANUAL",
+          "title": "Import NIA into live project; confirm 450 BOQ + ₱351,522,209.41",
+          "status": "MANUAL_REQUIRED",
+          "detail": "Requires interactive estimator execution"
+        },
+        {
+          "id": "P2-REGRESSION",
+          "phase": 2,
+          "type": "AUTO",
+          "title": "NIA Import Engine regression (450 leaves, sum, fingerprint)",
+          "status": "PASS",
+          "detail": "duration_ms=13458"
+        }
+      ]
+    },
+    {
+      "phase": 3,
+      "verdict": "PASS_AUTO / MANUAL_REQUIRED",
+      "checks": [
+        {
+          "id": "P3-MODULE",
+          "phase": 3,
+          "type": "AUTO",
+          "title": "WBS module",
+          "status": "PASS",
+          "detail": "features/wbs, services/wbs"
+        },
+        {
+          "id": "P3-UI",
+          "phase": 3,
+          "type": "MANUAL",
+          "title": "WBS expand/collapse/add/edit/delete/move + BOQ grouping",
+          "status": "MANUAL_REQUIRED",
+          "detail": "Requires interactive estimator execution"
+        }
+      ]
+    },
+    {
+      "phase": 4,
+      "verdict": "PASS_AUTO / MANUAL_REQUIRED",
+      "checks": [
+        {
+          "id": "P4-MODULE",
+          "phase": 4,
+          "type": "AUTO",
+          "title": "BOQ module",
+          "status": "PASS",
+          "detail": "features/boq/components/BoqModule.tsx, services/boq"
+        },
+        {
+          "id": "P4-UI",
+          "phase": 4,
+          "type": "MANUAL",
+          "title": "BOQ search/filter/sort/edit/copy/duplicate/delete/undo/redo/totals",
+          "status": "MANUAL_REQUIRED",
+          "detail": "Requires interactive estimator execution"
+        }
+      ]
+    },
+    {
+      "phase": 5,
+      "verdict": "PASS_AUTO / MANUAL_REQUIRED",
+      "checks": [
+        {
+          "id": "P5-MODULE",
+          "phase": 5,
+          "type": "AUTO",
+          "title": "Resource / rate library",
+          "status": "PASS",
+          "detail": "features/resource-library, services/rate-library"
+        },
+        {
+          "id": "P5-UI",
+          "phase": 5,
+          "type": "MANUAL",
+          "title": "Resource create/edit/delete/search/assign to BOQ",
+          "status": "MANUAL_REQUIRED",
+          "detail": "Requires interactive estimator execution"
+        }
+      ]
+    },
+    {
+      "phase": 6,
+      "verdict": "PASS_AUTO / MANUAL_REQUIRED",
+      "checks": [
+        {
+          "id": "P6-MODULE",
+          "phase": 6,
+          "type": "AUTO",
+          "title": "Estimate summary",
+          "status": "PASS",
+          "detail": "services/estimate"
+        },
+        {
+          "id": "P6-UI",
+          "phase": 6,
+          "type": "MANUAL",
+          "title": "Estimate Summary categories + refresh after BOQ change",
+          "status": "MANUAL_REQUIRED",
+          "detail": "Requires interactive estimator execution"
+        }
+      ]
+    },
+    {
+      "phase": 7,
+      "verdict": "PASS_AUTO / MANUAL_REQUIRED",
+      "checks": [
+        {
+          "id": "P7-MODULE",
+          "phase": 7,
+          "type": "AUTO",
+          "title": "Tender package",
+          "status": "PASS",
+          "detail": "services/tender, features/tender"
+        },
+        {
+          "id": "P7-UI",
+          "phase": 7,
+          "type": "MANUAL",
+          "title": "Tender generate/preview/PDF/totals",
+          "status": "MANUAL_REQUIRED",
+          "detail": "Requires interactive estimator execution"
+        }
+      ]
+    },
+    {
+      "phase": 8,
+      "verdict": "PASS_AUTO / MANUAL_REQUIRED",
+      "checks": [
+        {
+          "id": "P8-MODULE",
+          "phase": 8,
+          "type": "AUTO",
+          "title": "Master templates",
+          "status": "PASS",
+          "detail": "services/master-templates, features/master-templates"
+        },
+        {
+          "id": "P8-UI",
+          "phase": 8,
+          "type": "MANUAL",
+          "title": "Approve project + Save as Master Template + version",
+          "status": "MANUAL_REQUIRED",
+          "detail": "Requires interactive estimator execution"
+        }
+      ]
+    },
+    {
+      "phase": 9,
+      "verdict": "PASS_AUTO / MANUAL_REQUIRED",
+      "checks": [
+        {
+          "id": "P9-MODULE",
+          "phase": 9,
+          "type": "AUTO",
+          "title": "Template reuse / create-from-template",
+          "status": "PASS",
+          "detail": "services/master-templates"
+        },
+        {
+          "id": "P9-UI",
+          "phase": 9,
+          "type": "MANUAL",
+          "title": "New project from template copies WBS/BOQ/Rates/Resources/Estimate",
+          "status": "MANUAL_REQUIRED",
+          "detail": "Requires interactive estimator execution"
+        }
+      ]
+    },
+    {
+      "phase": 10,
+      "verdict": "PASS_AUTO / MANUAL_REQUIRED",
+      "checks": [
+        {
+          "id": "P10-MODULE",
+          "phase": 10,
+          "type": "AUTO",
+          "title": "Historical archive",
+          "status": "PASS",
+          "detail": "services/historical-projects, app/(shell)/historical"
+        },
+        {
+          "id": "P10-UI",
+          "phase": 10,
+          "type": "MANUAL",
+          "title": "Archive / restore / compare versions",
+          "status": "MANUAL_REQUIRED",
+          "detail": "Requires interactive estimator execution"
+        }
+      ]
+    },
+    {
+      "phase": 11,
+      "verdict": "PASS_AUTO / MANUAL_REQUIRED",
+      "checks": [
+        {
+          "id": "P11-MODULE",
+          "phase": 11,
+          "type": "AUTO",
+          "title": "Audit trail",
+          "status": "PASS",
+          "detail": "services/audit"
+        },
+        {
+          "id": "P11-UI",
+          "phase": 11,
+          "type": "MANUAL",
+          "title": "Audit trail contains pilot actions",
+          "status": "MANUAL_REQUIRED",
+          "detail": "Requires interactive estimator execution"
+        }
+      ]
+    },
+    {
+      "phase": 12,
+      "verdict": "PASS_AUTO / MANUAL_REQUIRED",
+      "checks": [
+        {
+          "id": "P12-MODULE",
+          "phase": 12,
+          "type": "AUTO",
+          "title": "Quantity Takeoff + BOQ link",
+          "status": "PASS",
+          "detail": "features/takeoff, services/takeoff/boq-link.ts, lib/takeoff/boq-sync.ts"
+        },
+        {
+          "id": "P12-UI",
+          "phase": 12,
+          "type": "MANUAL",
+          "title": "Takeoff upload/calibrate/measure/assign/live qty/coverage/export",
+          "status": "MANUAL_REQUIRED",
+          "detail": "Requires interactive estimator execution"
+        }
+      ]
+    },
+    {
+      "phase": 13,
+      "verdict": "MANUAL_REQUIRED",
+      "checks": [
+        {
+          "id": "P13-PERF",
+          "phase": 13,
+          "type": "MANUAL",
+          "title": "Performance targets (dashboard/list/open/BOQ/estimate/tender PDF)",
+          "status": "MANUAL_REQUIRED",
+          "detail": "Requires interactive estimator execution"
+        }
+      ]
+    },
+    {
+      "phase": 14,
+      "verdict": "PASS",
+      "checks": [
+        {
+          "id": "P14-FIXTURE",
+          "phase": 14,
+          "type": "AUTO",
+          "title": "STREVI sample workbook present",
+          "status": "PASS",
+          "detail": "samples/STREVI_BCB_Breakdown.xlsx"
+        },
+        {
+          "id": "P14-REGRESSION",
+          "phase": 14,
+          "type": "AUTO",
+          "title": "Import Engine v1 OVERALL PASS (NIA + STREVI)",
+          "status": "PASS",
+          "detail": "OVERALL: PASS"
+        },
+        {
+          "id": "P14-NIA",
+          "phase": 14,
+          "type": "AUTO",
+          "title": "NIA PASS",
+          "status": "PASS",
+          "detail": "450 leaves · Direct Cost 351522209.41"
+        },
+        {
+          "id": "P14-STREVI",
+          "phase": 14,
+          "type": "AUTO",
+          "title": "STREVI PASS",
+          "status": "PASS",
+          "detail": "505 leaves"
+        },
+        {
+          "id": "POLICY-NO-ENGINE-EDIT",
+          "phase": 14,
+          "type": "AUTO",
+          "title": "Pilot policy: Import Engine not modified by this checklist",
+          "status": "PASS",
+          "detail": "Checklist only executes regression; does not edit lib/smart-import or services/smart-import"
+        }
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "id": "P2-FIXTURE",
+      "phase": 2,
+      "type": "AUTO",
+      "title": "NIA sample workbook present",
+      "status": "PASS",
+      "detail": "samples/NIA_Budgetary_Cost_Breakdown.xlsx"
+    },
+    {
+      "id": "P14-FIXTURE",
+      "phase": 14,
+      "type": "AUTO",
+      "title": "STREVI sample workbook present",
+      "status": "PASS",
+      "detail": "samples/STREVI_BCB_Breakdown.xlsx"
+    },
+    {
+      "id": "P2-GOLDEN",
+      "phase": 2,
+      "type": "AUTO",
+      "title": "Import Engine v1 regression goldens present",
+      "status": "PASS",
+      "detail": "docs/import-engine-v1/REGRESSION_GOLDENS.json"
+    },
+    {
+      "id": "P1-ROUTE",
+      "phase": 1,
+      "type": "AUTO",
+      "title": "Project create/list services",
+      "status": "PASS",
+      "detail": "services/projects/create-project.ts, services/projects/list-projects.ts"
+    },
+    {
+      "id": "P3-MODULE",
+      "phase": 3,
+      "type": "AUTO",
+      "title": "WBS module",
+      "status": "PASS",
+      "detail": "features/wbs, services/wbs"
+    },
+    {
+      "id": "P4-MODULE",
+      "phase": 4,
+      "type": "AUTO",
+      "title": "BOQ module",
+      "status": "PASS",
+      "detail": "features/boq/components/BoqModule.tsx, services/boq"
+    },
+    {
+      "id": "P5-MODULE",
+      "phase": 5,
+      "type": "AUTO",
+      "title": "Resource / rate library",
+      "status": "PASS",
+      "detail": "features/resource-library, services/rate-library"
+    },
+    {
+      "id": "P6-MODULE",
+      "phase": 6,
+      "type": "AUTO",
+      "title": "Estimate summary",
+      "status": "PASS",
+      "detail": "services/estimate"
+    },
+    {
+      "id": "P7-MODULE",
+      "phase": 7,
+      "type": "AUTO",
+      "title": "Tender package",
+      "status": "PASS",
+      "detail": "services/tender, features/tender"
+    },
+    {
+      "id": "P8-MODULE",
+      "phase": 8,
+      "type": "AUTO",
+      "title": "Master templates",
+      "status": "PASS",
+      "detail": "services/master-templates, features/master-templates"
+    },
+    {
+      "id": "P9-MODULE",
+      "phase": 9,
+      "type": "AUTO",
+      "title": "Template reuse / create-from-template",
+      "status": "PASS",
+      "detail": "services/master-templates"
+    },
+    {
+      "id": "P10-MODULE",
+      "phase": 10,
+      "type": "AUTO",
+      "title": "Historical archive",
+      "status": "PASS",
+      "detail": "services/historical-projects, app/(shell)/historical"
+    },
+    {
+      "id": "P11-MODULE",
+      "phase": 11,
+      "type": "AUTO",
+      "title": "Audit trail",
+      "status": "PASS",
+      "detail": "services/audit"
+    },
+    {
+      "id": "P12-MODULE",
+      "phase": 12,
+      "type": "AUTO",
+      "title": "Quantity Takeoff + BOQ link",
+      "status": "PASS",
+      "detail": "features/takeoff, services/takeoff/boq-link.ts, lib/takeoff/boq-sync.ts"
+    },
+    {
+      "id": "P1-UI",
+      "phase": 1,
+      "type": "MANUAL",
+      "title": "Create project, save, verify project code & list",
+      "status": "MANUAL_REQUIRED",
+      "detail": "Requires interactive estimator execution"
+    },
+    {
+      "id": "P2-UI",
+      "phase": 2,
+      "type": "MANUAL",
+      "title": "Import NIA into live project; confirm 450 BOQ + ₱351,522,209.41",
+      "status": "MANUAL_REQUIRED",
+      "detail": "Requires interactive estimator execution"
+    },
+    {
+      "id": "P3-UI",
+      "phase": 3,
+      "type": "MANUAL",
+      "title": "WBS expand/collapse/add/edit/delete/move + BOQ grouping",
+      "status": "MANUAL_REQUIRED",
+      "detail": "Requires interactive estimator execution"
+    },
+    {
+      "id": "P4-UI",
+      "phase": 4,
+      "type": "MANUAL",
+      "title": "BOQ search/filter/sort/edit/copy/duplicate/delete/undo/redo/totals",
+      "status": "MANUAL_REQUIRED",
+      "detail": "Requires interactive estimator execution"
+    },
+    {
+      "id": "P5-UI",
+      "phase": 5,
+      "type": "MANUAL",
+      "title": "Resource create/edit/delete/search/assign to BOQ",
+      "status": "MANUAL_REQUIRED",
+      "detail": "Requires interactive estimator execution"
+    },
+    {
+      "id": "P6-UI",
+      "phase": 6,
+      "type": "MANUAL",
+      "title": "Estimate Summary categories + refresh after BOQ change",
+      "status": "MANUAL_REQUIRED",
+      "detail": "Requires interactive estimator execution"
+    },
+    {
+      "id": "P7-UI",
+      "phase": 7,
+      "type": "MANUAL",
+      "title": "Tender generate/preview/PDF/totals",
+      "status": "MANUAL_REQUIRED",
+      "detail": "Requires interactive estimator execution"
+    },
+    {
+      "id": "P8-UI",
+      "phase": 8,
+      "type": "MANUAL",
+      "title": "Approve project + Save as Master Template + version",
+      "status": "MANUAL_REQUIRED",
+      "detail": "Requires interactive estimator execution"
+    },
+    {
+      "id": "P9-UI",
+      "phase": 9,
+      "type": "MANUAL",
+      "title": "New project from template copies WBS/BOQ/Rates/Resources/Estimate",
+      "status": "MANUAL_REQUIRED",
+      "detail": "Requires interactive estimator execution"
+    },
+    {
+      "id": "P10-UI",
+      "phase": 10,
+      "type": "MANUAL",
+      "title": "Archive / restore / compare versions",
+      "status": "MANUAL_REQUIRED",
+      "detail": "Requires interactive estimator execution"
+    },
+    {
+      "id": "P11-UI",
+      "phase": 11,
+      "type": "MANUAL",
+      "title": "Audit trail contains pilot actions",
+      "status": "MANUAL_REQUIRED",
+      "detail": "Requires interactive estimator execution"
+    },
+    {
+      "id": "P12-UI",
+      "phase": 12,
+      "type": "MANUAL",
+      "title": "Takeoff upload/calibrate/measure/assign/live qty/coverage/export",
+      "status": "MANUAL_REQUIRED",
+      "detail": "Requires interactive estimator execution"
+    },
+    {
+      "id": "P13-PERF",
+      "phase": 13,
+      "type": "MANUAL",
+      "title": "Performance targets (dashboard/list/open/BOQ/estimate/tender PDF)",
+      "status": "MANUAL_REQUIRED",
+      "detail": "Requires interactive estimator execution"
+    },
+    {
+      "id": "P2-REGRESSION",
+      "phase": 2,
+      "type": "AUTO",
+      "title": "NIA Import Engine regression (450 leaves, sum, fingerprint)",
+      "status": "PASS",
+      "detail": "duration_ms=13458"
+    },
+    {
+      "id": "P14-REGRESSION",
+      "phase": 14,
+      "type": "AUTO",
+      "title": "Import Engine v1 OVERALL PASS (NIA + STREVI)",
+      "status": "PASS",
+      "detail": "OVERALL: PASS"
+    },
+    {
+      "id": "P14-NIA",
+      "phase": 14,
+      "type": "AUTO",
+      "title": "NIA PASS",
+      "status": "PASS",
+      "detail": "450 leaves · Direct Cost 351522209.41"
+    },
+    {
+      "id": "P14-STREVI",
+      "phase": 14,
+      "type": "AUTO",
+      "title": "STREVI PASS",
+      "status": "PASS",
+      "detail": "505 leaves"
+    },
+    {
+      "id": "POLICY-NO-ENGINE-EDIT",
+      "phase": 14,
+      "type": "AUTO",
+      "title": "Pilot policy: Import Engine not modified by this checklist",
+      "status": "PASS",
+      "detail": "Checklist only executes regression; does not edit lib/smart-import or services/smart-import"
+    }
+  ]
+}

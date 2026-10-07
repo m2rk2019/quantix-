@@ -1,0 +1,67 @@
+{
+  "engine": "Quantix Import Engine v1.0",
+  "version": "1.0.0",
+  "frozen_at": "2026-10-05",
+  "policy": "Do not change importer behavior unless a production bug is found. Any change must keep both fixtures PASS.",
+  "fixtures": [
+    {
+      "key": "nia",
+      "display_name": "NIA Budgetary Cost Breakdown",
+      "sample_path": "samples/NIA_Budgetary_Cost_Breakdown.xlsx",
+      "expected": {
+        "leaf_count": 450,
+        "leaf_sum_rounded": 351522209.41,
+        "leaf_fingerprint_sha256": "e747fd99b70466f140fc854767d3111456597479e84323d489b39aa41d7055ea",
+        "wbs_levels": [
+          1,
+          2
+        ],
+        "wbs_count": 107,
+        "excel_grand_total_vat_ex": 351522209.41,
+        "must_include_leaf_descriptions": [],
+        "must_not_include_leaf_descriptions": [],
+        "must_be_group_header": []
+      }
+    },
+    {
+      "key": "strevi",
+      "display_name": "STREVI BCB Breakdown & Summary (4 Bldgs)",
+      "sample_path": "samples/STREVI_BCB_Breakdown.xlsx",
+      "expected": {
+        "leaf_count": 505,
+        "leaf_sum_rounded": 1859023517.47,
+        "leaf_fingerprint_sha256": "82efa807cc01e4046091fdf8ae5e39a51f87f8c875cc25dd4a288e03dc90b109",
+        "wbs_levels": [
+          1,
+          2
+        ],
+        "wbs_count": 125,
+        "excel_grand_total_vat_ex": 1859023517.47,
+        "must_include_leaf_descriptions": [
+          {
+            "pattern": "^Maintenance Crew$"
+          },
+          {
+            "pattern": "Security Grills \\(Meter Center"
+          },
+          {
+            "pattern": "KW-hr Meter Base"
+          },
+          {
+            "pattern": "MAIN:\\s*100AT"
+          }
+        ],
+        "must_not_include_leaf_descriptions": [
+          {
+            "pattern": "MC2 Typ"
+          }
+        ],
+        "must_be_group_header": [
+          {
+            "pattern": "MC2 Typ"
+          }
+        ]
+      }
+    }
+  ]
+}

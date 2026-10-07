@@ -1,0 +1,15 @@
+{
+  "engine": "Quantix Import Engine v1.0",
+  "version": "1.0.0",
+  "label": "Quantix Import Engine v1.0",
+  "frozen_at": "2026-10-05",
+  "status": "ACCEPTED_FROZEN",
+  "policy": "Do not modify importer behavior unless a production bug is discovered. Any change must pass npm run regression:import-engine-v1 (NIA + STREVI).",
+  "version_marker": "lib/smart-import/engine-version.ts",
+  "standard_doc": "docs/IMPORT_ENGINE_V1.md",
+  "regression_script": "scripts/regression/import-engine-v1.mjs",
+  "regression_npm": "regression:import-engine-v1",
+  "supported_patterns": ["nia", "strevi"],
+  "git_tag_recommended": "import-engine-v1.0",
+  "note": "Repository may not yet have commits; apply git tag import-engine-v1.0 when cutting the freeze commit."
+}

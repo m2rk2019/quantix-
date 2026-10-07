@@ -1,0 +1,23 @@
+-- Sprint 1 seed instructions
+--
+-- 1. Create a user in Supabase Dashboard → Authentication → Users
+-- 2. Copy the user's UUID
+-- 3. Run (replace placeholders) using the SQL editor or service role:
+--
+-- INSERT INTO public.users (id, email, full_name, role)
+-- VALUES (
+--   '00000000-0000-0000-0000-000000000001',
+--   'admin@example.com',
+--   'Super Admin',
+--   'super_admin'
+-- );
+--
+-- Repeat for estimator, quantity_surveyor, and viewer test accounts.
+-- Apply migration 20260625120000_create_users_auth.sql before seeding.
+--
+-- Demo project (150 WBS, 2,000 BOQ): see docs/DEMO_PROJECT.md
+-- Run supabase/seed-demo-office-building.sql after users exist.
+--
+-- Formula validation demo (100 BOQ, rate analysis): see docs/FORMULA_VALIDATION.md
+-- Generate: npm run demo:formula-validation
+-- Run supabase/seed-formula-validation-demo.sql after users exist.

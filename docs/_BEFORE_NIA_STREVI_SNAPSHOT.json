@@ -1,0 +1,163 @@
+{
+  "captured_at": "2026-10-05T08:53:05.802Z",
+  "nia_db": {
+    "label": "NIA",
+    "project": {
+      "id": "d387f1f1-4271-4e35-832c-e30ba2cb0e66",
+      "project_code": "QTX-2026-000013",
+      "project_name": "4PH QCITIZEN HOMES NIA ROAD RENTAL HOUSING PROJECT"
+    },
+    "boq_count": 450,
+    "boq_sum": 351522209.34,
+    "priced_count": 450,
+    "rate_library_count": 231,
+    "estimate": {
+      "direct_cost": 351522209.34,
+      "indirect_cost": 35152220.93,
+      "contingency": 19333721.51,
+      "markup": 40600815.18,
+      "vat": 53593076.04,
+      "grand_total": 500202043
+    },
+    "fingerprint_sha": "MS41MG1tIHNxLiAoMTYgQVdHKSBUd2lz",
+    "fingerprint": "[omitted]"
+  },
+  "strevi_db": {
+    "label": "STREVI",
+    "project": {
+      "id": "a356c582-fe81-472d-8bee-9575970dd3a0",
+      "project_code": "QTX-2026-000017",
+      "project_name": "STREVI RESIDENCES - (1 Parking , 15-Typical Floors & RD)"
+    },
+    "boq_count": 504,
+    "boq_sum": 1856005617.83,
+    "priced_count": 504,
+    "rate_library_count": 282,
+    "estimate": {
+      "direct_cost": 1856005617.83,
+      "indirect_cost": 185600561.78,
+      "contingency": 102080308.98,
+      "markup": 214368648.86,
+      "vat": 282966616.49,
+      "grand_total": 2641021753.94
+    },
+    "fingerprint_sha": "MS41MG1tIHNxLiAoMTYgQVdHKSBUd2lz",
+    "fingerprint": "[omitted]"
+  },
+  "nia_extract": {
+    "label": "NIA",
+    "leaf_count": 450,
+    "leaf_sum_raw": 351522209.40614176,
+    "leaf_sum_rounded": 351522209.41,
+    "fingerprint_sha": "MTV8TW9iaWxpemF0aW9uL0RlbW9iaWxp",
+    "fingerprint": "[omitted]",
+    "key_rows": {
+      "security_grills": {
+        "row_index": 333,
+        "item_number": "ITEM-273",
+        "description": "Security Grills (Meter Center & Busduct)",
+        "unit": "lot",
+        "quantity": 1,
+        "unit_rate": 1500000,
+        "amount": 1500000,
+        "is_group_header": false,
+        "group_path": [
+          "ELECTRICAL",
+          "Power System Meter Center"
+        ],
+        "discipline": "Electrical",
+        "sort_order": 272
+      },
+      "kw_hr": {
+        "row_index": 332,
+        "item_number": "ITEM-272",
+        "description": "KW-hr Meter Base (installation only)",
+        "unit": "set/s",
+        "quantity": 28,
+        "unit_rate": 1000,
+        "amount": 28000,
+        "is_group_header": false,
+        "group_path": [
+          "ELECTRICAL",
+          "Power System Meter Center"
+        ],
+        "discipline": "Electrical",
+        "sort_order": 271
+      },
+      "main_100at": {
+        "row_index": 330,
+        "item_number": "ITEM-271",
+        "description": "MAIN: 100AT, 100AF, 4P, 36KAIC, MCCB, 240V, 60Hz NEMA 1",
+        "unit": "set/s",
+        "quantity": 11,
+        "unit_rate": 116677.48625000002,
+        "amount": 1283452.3487500001,
+        "is_group_header": false,
+        "group_path": [
+          "ELECTRICAL",
+          "Power System Meter Center"
+        ],
+        "discipline": "Electrical",
+        "sort_order": 270
+      }
+    }
+  },
+  "strevi_extract": {
+    "label": "STREVI",
+    "leaf_count": 504,
+    "leaf_sum_raw": 1856005617.8381371,
+    "leaf_sum_rounded": 1856005617.84,
+    "fingerprint_sha": "MTZ8Q2xlYXJpbmcgYW5kIGdydWJiaW5n",
+    "fingerprint": "[omitted]",
+    "key_rows": {
+      "mc2": {
+        "row_index": 373,
+        "item_number": "ITEM-337",
+        "description": "MC2 Typ to MC-3F TO MC-16F",
+        "unit": "set/s",
+        "quantity": 60,
+        "unit_rate": 143654.99000000002,
+        "amount": 8619299.4,
+        "is_group_header": false,
+        "group_path": [
+          "ELECTRICAL",
+          "Power System Meter Center"
+        ],
+        "discipline": "Electrical",
+        "sort_order": 336
+      },
+      "kw_hr": {
+        "row_index": 376,
+        "item_number": "ITEM-339",
+        "description": "KW-hr Meter Base (installation only)",
+        "unit": "set/s",
+        "quantity": 2040,
+        "unit_rate": 1000,
+        "amount": 2040000,
+        "is_group_header": false,
+        "group_path": [
+          "ELECTRICAL",
+          "Power System Meter Center"
+        ],
+        "discipline": "Electrical",
+        "sort_order": 338
+      },
+      "main_100at": {
+        "row_index": 374,
+        "item_number": "ITEM-338",
+        "description": "MAIN: 100AT, 100AF, 400V/230V, 3P+N, 36kAIC, MCCB",
+        "unit": "set/s",
+        "quantity": 60,
+        "unit_rate": 109654.99,
+        "amount": 6579299.4,
+        "is_group_header": false,
+        "group_path": [
+          "ELECTRICAL",
+          "Power System Meter Center"
+        ],
+        "discipline": "Electrical",
+        "sort_order": 337
+      }
+    }
+  }
+}
